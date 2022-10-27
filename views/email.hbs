@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+    <title>login node js</title>
+</head>
+<body>
+<nav>
+  <h4>Comité des oeuvres sociale</h4>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/login">Login</a></li>
+    <li><a href="/register">Register</a></li>
+    <li><a href="/trans">transform</a></li>
+  </ul>
+</nav>
+<div class="container mt-4">
+  <div class="card">
+     <div class="card-header">sending email
+    </div>
+    <div class="card-body">
+        <form action="/auth/email" method="POST">
+            <div class="form-group">
+                <div class="form-group">
+                <label for="from">from: </label>
+                 <input type="email" class="form-control" id="from" name="from" placeholder="" aria-required="true"> 
+                </select> 
+                 </div>
+                <label for="to">to: </label>
+                <input type="email" class="form-control" id="to" name="to" placeholder="" aria-required="true">
+                </select> 
+                 </div>  
+                <label for="objet">objet: </label>
+                <input type="text" class="form-control" id="objet" name="objet" placeholder="Enter objet" >
+                </select> 
+                 </div>  
+            
+            <div class="form-group">
+                <label for="message">votre message  </label>
+                <input type="text" class="form-control" id="message" name="message" placeholder="entrez votre message " aria-required="true" >
+            </div>
+             <br>
+             
+            <br>
+            <button type="submit" class="btn btn-primary">send </button>       
+            
+            <button type="exit" class="btn btn-primary">exit </button>
+        </form>
+    </div>
+</div>
+{{#if message}}
+<h5 class="alert alert-danger mt-4">
+    {{message}}
+</h5>
+
+{{/if}}
+</div>
+</body>
+</html>

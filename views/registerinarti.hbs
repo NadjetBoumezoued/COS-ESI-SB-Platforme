@@ -1,0 +1,252 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <titre> </title>
+    <style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Exo:wght@800&family=Raleway&display=swap');
+
+body {
+  background-color: #232526;
+ 
+}
+
+#title {
+  font-family: 'Exo', sans-serif;
+  text-align: center;
+  background: #00c6ff;
+  background: linear-gradient(225deg, #00c6ff, #0072ff);
+  -webkit-text-fill-color: transparent;
+}
+
+#description {
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  margin-top: -10px;
+  color: #fff;
+}
+
+.seperator {
+  width: 20vw;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.form-container {
+  max-width: 60vw;
+  margin: 0 auto;
+  background: white;
+  background: linear-gradient(300deg,white, #d0d3d6);
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.bold-txt {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+  color: #0066ab;
+  display: inline-block;
+}
+
+.txt {
+  font-family: 'Raleway', sans-serif;
+  color: #fff;
+}
+
+#survey-form {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-organizer {
+  margin-top: 3px;
+  margin-bottom: 20px;
+  line-height: 20px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.sel-organizer {
+  margin: -12px 0 33px 0;
+  padding: 5px 0 5px 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+.fieldset-organizer {
+  font-family: 'Raleway', sans-serif;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  line-height: 25px;
+  margin-bottom: 30px;
+}
+
+#additional-cmnts {
+  font-family: 'Raleway', sans-serif;
+  min-height: 100px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+#submit {
+  font-family: 'Raleway', sans-serif;
+  background-color: #0066ab;
+  border-radius: 5px;
+  border-color: transparent;
+  line-height: 25px;
+  font-size: 16px;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 10px;
+}
+#annuler {
+  font-family: 'Raleway', sans-serif;
+  background-color: #0066ab;
+  border-radius: 5px;
+  border-color: transparent;
+  line-height: 25px;
+  font-size: 16px;
+  font-weight: 900;
+  color: #fff;
+}
+#modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.containte{
+  position: relative;
+    max-width: 700px;
+    padding: 0px;
+    margin: 0 0 auto;
+}
+    
+#addtask{
+    width: 100%;
+    display: flex;
+    padding: 10px 0;
+}
+#addtask > input[type="text"]
+{
+    width: 90%;
+    color:#333;
+    border: none;
+    border-bottom: 2px solid #666;
+    background: none;
+    padding: 10px;
+    font-size: 22px;
+    outline: none;
+    display: inline;
+}
+#addtask button{
+    margin: 0 10px;
+    background: #222;
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #0066ab;
+}
+.notcompleted, .completed{
+margin: 5px 0;
+padding: 20px;
+}
+h3{
+  font-size: 20px;
+  text-align: center;
+  color:#0066ab;
+}
+ol{
+  list-style: none;
+  counter-reset: my-counter;
+}
+ol li{
+  width: 100%;
+  padding: 18px;
+  margin: 5px 0;
+  background: #e96969bb;
+  font-size: 20px;
+  counter-increment: my-counter;
+  height: 15px;
+}
+ol.completed li{
+  background: #00ff62;
+}
+ol li::before{
+  content: counter(my-counter);
+  background: #231381;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: inline-block;
+  line-height: 2rem;
+  text-align: center;
+  color: #fff;
+  margin-right: 0.5rem;
+}
+li button{
+    float:right;
+    padding: 5px;
+    font-size: 28px;
+    line-height: 28px;
+    margin-right: 15px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+    </style>
+    
+</head>
+<body>
+  <main>
+    
+    <p id="description">
+     <br> <br> <br>  inscrption aux articles
+    </p>
+    <hr class="seperator">
+    <div class="form-container">
+      <form id="survey-form"  action="/auth/registerinarti" method="POST">
+        
+        <label id="sous-chapiter-label" for="name" class="bold-txt ">
+        Nom d'utulisateur
+        </label>
+        <input id="sous-chapiter" type="text" class= "form-organizer" name="name" placeholder="Enter votre nom" required>
+        <label id="name-label" for="name" class="bold-txt ">
+        Email
+        </label>
+        <input id="name" type="email" class= "form-organizer" name="email" placeholder="Enter votre email" required>
+        <label for="image" class="bold-txt ">Inserer votre fichier</label>
+                   <br>
+                <input type="file" name="image">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+        
+       
+        <p class="bold-txt">Informations suplémantaires</p>
+      <textarea id="additional-cmnts" name="info" placeholder="Ajouter d'autres infomations"></textarea>
+      <button id="submit" type="submit">Inscription article</button>
+      {{#if message}}
+<h3 >
+    {{message}}
+</h3>
+
+{{/if}}
+      </form>
+      
+    </div>
+  
+
+
+</main>
+</body>
+</html>

@@ -1,0 +1,911 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>add article</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon
+		============================================ -->
+    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
+    <!-- Google Fonts
+		============================================ -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
+    <!-- Bootstrap CSS
+		============================================ -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <!-- Bootstrap CSS
+		============================================ -->
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <!-- owl.carousel CSS
+		============================================ -->
+    <link rel="stylesheet" href="/css/owl.carousel.css">
+    <link rel="stylesheet" href="/css/owl.theme.css">
+    <link rel="stylesheet" href="/css/owl.transitions.css">
+    <!-- animate CSS
+		============================================ -->
+    <link rel="stylesheet" href="/css/animate.css">
+    <!-- normalize CSS
+		============================================ -->
+    <link rel="stylesheet" href="/css/normalize.css">
+    <!-- meanmenu icon CSS
+		============================================ -->
+    <link rel="stylesheet" href="/css/meanmenu.min.css">
+    <!-- main CSS
+		============================================ -->
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- educate icon CSS
+		============================================ -->
+    <link rel="stylesheet" href="/css/educate-custon-icon.css">
+    <!-- morrisjs CSS
+		============================================ -->
+    <link rel="stylesheet" href="/css/morrisjs/morris.css">
+    <!-- mCustomScrollbar CSS
+		============================================ -->
+    <link rel="stylesheet" href="/css/scrollbar/jquery.mCustomScrollbar.min.css">
+    <!-- metisMenu CSS
+		============================================ -->
+    <link rel="stylesheet" href="/css/metisMenu/metisMenu.min.css">
+    <link rel="stylesheet" href="/css/metisMenu/metisMenu-vertical.css">
+    <!-- calendar CSS
+		============================================ -->
+    <link rel="stylesheet" href="/css/calendar/fullcalendar.min.css">
+    <link rel="stylesheet" href="/css/calendar/fullcalendar.print.min.css">
+    <!-- forms CSS
+		============================================ -->
+    <link rel="stylesheet" href="/css/form/all-type-forms.css">
+    <!-- style CSS
+		============================================ -->
+    <link rel="stylesheet" href="/style3.css">
+    <!-- responsive CSS
+		============================================ -->
+    <link rel="stylesheet" href="/css/responsive.css">
+    <!-- modernizr JS
+		============================================ -->
+    <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
+    <!---->
+     <link rel="stylesheet" href="/style-formcss.css">
+    <link href="/scrpit-form.js">
+    <link href="/style (1).css" >
+    <link href="/js.js" >
+    <style>
+        /* Include the padding and border in an element's total width and height */
+   * {
+     box-sizing: border-box;
+   }
+   
+   /* Remove margins and padding from the list */
+   #myUL {
+     margin: 0;
+     padding: 0;
+   }
+   
+   /* Style the list items */
+  #myUL li {
+     cursor: pointer;
+     position: relative;
+     padding: 12px 8px 12px 40px;
+     background: #eee;
+     font-size: 18px;
+     transition: 0.2s;
+   
+     /* make the list items unselectable */
+     -webkit-user-select: none;
+     -moz-user-select: none;
+     -ms-user-select: none;
+     user-select: none;
+   }
+   
+   /* Set all odd list items to a different color (zebra-stripes) */
+   #myUL li:nth-child(odd) {
+     background: #f9f9f9;
+   }
+   
+   /* Darker background-color on hover */
+   #myUL li:hover {
+     background: #ddd;
+   }
+   
+   /* When clicked on, add a background color and strike out text */
+   #myUL li.checked {
+     background: #888;
+     color: #fff;
+     text-decoration: line-through;
+   }
+   
+   /* Add a "checked" mark when clicked on */
+   #myUL li.checked::before {
+     content: '';
+     position: absolute;
+     border-color: #fff;
+     border-style: solid;
+     border-width: 0 2px 2px 0;
+     top: 10px;
+     left: 16px;
+     transform: rotate(45deg);
+     height: 15px;
+     width: 7px;
+   }
+   
+   /* Style the close button */
+   .close {
+     position: absolute;
+     right: 0;
+     top: 0;
+     padding: 12px 16px 12px 16px;
+   }
+   
+   .close:hover {
+     background-color: #f44336;
+     color: white;
+   }
+   
+   /* Style the header */
+   .header {
+     background-color: white;
+     color: black;
+     text-align: center;
+     padding: 0px 0px;
+   }
+   
+   /* Clear floats after the header */
+   .header:after {
+     content: "";
+     display: table;
+     clear: both;
+   }
+   
+   /* Style the input */
+   
+   
+   /* Style the "Add" button */
+   .addBtn {
+     padding: 10px;
+     width:10%;
+     background: #0066ab;
+     color: black;
+     float: left;
+     text-align: center;
+     font-size: 16px;
+     cursor: pointer;
+     transition: 0.3s;
+     border-radius: 0;
+   }
+   
+   .addBtn:hover {
+     background-color: #0066ab;
+   }
+           </style>
+</head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+<script type="text/javascript" src="javas.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/typicons/2.0.8/typicons.min.css" rel="stylesheet" />
+
+<body>
+    <!--[if lt IE 8]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+    <!-- Start Left menu area -->
+    <div class="left-sidebar-pro">
+        <nav id="sidebar" class="">
+            <div class="sidebar-header">
+                <strong><a href="indexadmin.hbs"><img src="/img/logo/logosite-01.png" alt="" /></a></strong>
+            </div>
+            <div class="left-custom-menu-adp-wrap comment-scrollbar">
+                <nav class="sidebar-nav left-sidebar-menu-pro">
+                    <ul class="metismenu" id="menu1">
+                        <li>
+                            <a class="has-arrow" href="indexadmin.hbs">
+								   <span class="educate-icon educate-home icon-wrap"></span>
+								   <span class="mini-click-non">Dashboard</span>
+								</a>
+                            <ul class="submenu-angle" aria-expanded="true">
+                                <li><a title="Dashboard v.1" href="/indexadmin"><span class="mini-sub-pro">Dashboard</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a title="Landing Page" href="/events" aria-expanded="false"><span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Evenement</span></a>
+                        </li>
+                       
+                        <li>
+                            <a class="has-arrow" href="/all-utilisateurs" aria-expanded="false"><span class="educate-icon educate-student icon-wrap"></span> <span class="mini-click-non">utilisateurs</span></a>
+                            <ul class="submenu-angle" aria-expanded="false">
+                                <li><a title="All Students" href="/all-utilisateurs"><span class="mini-sub-pro">All utilisateurs</span></a></li>
+                                <li><a title="Add Students" href="/add-utilisateur"><span class="mini-sub-pro">Add utilisateur</span></a></li>
+                                <li><a title="Edit Students" href="/delete-utilisateur"><span class="mini-sub-pro">delete utilisateur</span></a></li>
+                                <li><a title="Students Profile" href="/utilisateur-profile"><span class="mini-sub-pro">utilisateur Profile</span></a></li>
+                            </ul>
+                        </li>
+                          <li>
+                            <a class="has-arrow" href="/all-chapiters" aria-expanded="false"><span class="educate-icon educate-course icon-wrap"></span> <span class="mini-click-non">Chapiters</span></a>
+                            <ul class="submenu-angle" aria-expanded="false">
+                                <li><a title="All Courses" href="/all-chapiters"><span class="mini-sub-pro">All Chapiters</span></a></li>
+                                <li><a title="Add Courses" href="/add-chapiter"><span class="mini-sub-pro">Add Chapiter</span></a></li>
+                                <li><a title="Edit Courses" href="/delete-chapiter"><span class="mini-sub-pro">delete Chapiter</span></a></li>
+                                
+                            </ul>
+                        </li>
+                          <li>
+                            <a class="has-arrow" href="all-chapiters.html" aria-expanded="false"><span class="educate-icon educate-library icon-wrap"></span> <span class="mini-click-non">sous-chapiters</span></a>
+                            <ul class="submenu-angle" aria-expanded="false">
+                                <li><a title="All Library" href="/sous-chapiters"><span class="mini-sub-pro">sous-chapiters</span></a></li>
+                                <li><a title="Add Library" href="/add-sous-chapiter"><span class="mini-sub-pro">Add sous-chapiter</span></a></li>
+                                <li><a title="Edit Library" href="/delete-sous-chapiter"><span class="mini-sub-pro">delete sous-chapiter</span></a></li>
+                            </ul>
+                        </li>
+                       <li class="active">
+                            <a class="has-arrow" href="/all-chapiters" aria-expanded="false"><span class="educate-icon educate-department icon-wrap"></span> <span class="mini-click-non">Articles</span></a>
+                            <ul class="submenu-angle" aria-expanded="false">
+                                <li><a title="Departments List" href="/Articles"><span class="mini-sub-pro">liste des articles</span></a></li>
+                                <li><a title="Add Departments" href="/add-article"><span class="mini-sub-pro">Add article</span></a></li>
+                                <li><a title="Edit Departments" href="/delete-article"><span class="mini-sub-pro">delete article</span></a></li>
+                            </ul>
+                        </li>
+                                 <li>
+                            <a class="has-arrow" href="/mailbox" aria-expanded="false"><span class="educate-icon educate-message icon-wrap"></span> <span class="mini-click-non">Mailbox</span></a>
+                            <ul class="submenu-angle" aria-expanded="false">
+                                <li><a title="Inbox" href="/mailbox"><span class="mini-sub-pro">Inbox</span></a></li>
+                                <li><a title="View Mail" href="/mailbox-view"><span class="mini-sub-pro">demendes</span></a></li>
+                                <li><a title="Compose Mail" href="/mailbox-compose"><span class="mini-sub-pro">compose un email</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="has-arrow" href="/mailbox" aria-expanded="false"><span class="educate-icon educate-charts icon-wrap"></span> <span class="mini-click-non">les bilans</span></a>
+                           
+                        </li>
+                           <li>
+                            <a class="has-arrow" href="/mailbox" aria-expanded="false"><span class="educate-icon educate-charts icon-wrap"></span> <span class="mini-click-non">les bilans</span></a>
+                            <ul class="submenu-angle chart-mini-nb-dp" aria-expanded="false">
+                                <li><a title="Bar Charts" href="/billan"><span class="mini-sub-pro">billan</span></a></li>
+                                
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="has-arrow" href="/mailbox" aria-expanded="false"><span class="educate-icon educate-apps icon-wrap"></span> <span class="mini-click-non">Notifications</span></a>
+                            <ul class="submenu-angle app-mini-nb-dp" aria-expanded="false">
+                                <li><a title="Notifications" href="/notifications"><span class="mini-sub-pro">Notifications</span></a></li>
+                                <li><a title="Alerts" href="/messages"><span class="mini-sub-pro">messages</span></a></li>
+                            </ul>
+                        </li>
+                        
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </nav>
+    </div>
+    <!-- End Left menu area -->
+    <!-- Start Welcome area -->
+    <div class="all-content-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="logo-pro">
+                        <a href="index.html"><img class="main-logo" src="img/logo/logo.png" style=" height: 40px;"> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-advance-area">
+            <div class="header-top-area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="header-top-wraper">
+                                <div class="row">
+                                    <div class="col-lg-1 col-md-0 col-sm-1 col-xs-12">
+                                        <div class="menu-switcher-pro">
+                                            <button type="button" id="sidebarCollapse" class="btn bar-button-pro header-drl-controller-btn btn-info navbar-btn">
+													<i class="educate-icon educate-nav"></i>
+												</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-7 col-sm-6 col-xs-12">
+                                        <div class="header-top-menu tabl-d-n">
+                                            <ul class="nav navbar-nav mai-top-nav">
+                                                <li class="nav-item"><a href="acceuil.html" class="nav-link">Acceuil</a>
+                                                </li>
+                                                <li class="nav-item"><a href="about.html" class="nav-link">About</a>
+                                                </li>
+                                                <li class="nav-item"><a href="appel offre.html" class="nav-link">Appel offre</a>
+                                                </li>
+                                                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                                        <div class="header-right-info">
+                                            <ul class="nav navbar-nav mai-top-nav header-right-menu">
+                                                <li class="nav-item dropdown">
+                                                    <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="educate-icon educate-message edu-chat-pro" aria-hidden="true"></i><span class="indicator-ms"></span></a>
+                                                    <div role="menu" class="author-message-top dropdown-menu animated zoomIn">
+                                                        <div class="message-single-top">
+                                                            <h1>Message</h1>
+                                                        </div>
+                                                        <ul class="message-menu">
+                                                            <li>
+                                                                <a href="#">
+                                                                    <div class="message-img">
+                                                                        <img src="img/contact/1.jpg" alt="">
+                                                                    </div>
+                                                                    <div class="message-content">
+                                                                        <span class="message-date">6 Sept</span>
+                                                                        <h2>Boumaraf Malak</h2>
+                                                                        <p>Please done this project as soon possible.</p>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <div class="message-img">
+                                                                        <img src="img/contact/4.jpg" alt="">
+                                                                    </div>
+                                                                    <div class="message-content">
+                                                                        <span class="message-date">5 Sept</span>
+                                                                        <h2>Serine Labecir</h2>
+                                                                        <p>Please done this project as soon possible.</p>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <div class="message-img">
+                                                                        <img src="img/contact/3.jpg" alt="">
+                                                                    </div>
+                                                                    <div class="message-content">
+                                                                        <span class="message-date">3 Sept</span>
+                                                                        <h2>Yasser Maleki</h2>
+                                                                        <p>Please done this project as soon possible.</p>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <div class="message-img">
+                                                                        <img src="img/contact/2.jpg" alt="">
+                                                                    </div>
+                                                                    <div class="message-content">
+                                                                        <span class="message-date">1 Sept</span>
+                                                                        <h2>Abir Benaissa</h2>
+                                                                        <p>Please done this project as soon possible.</p>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="message-view">
+                                                            <a href="#">View All Messages</a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="educate-icon educate-bell" aria-hidden="true"></i><span class="indicator-nt"></span></a>
+                                                    <div role="menu" class="notification-author dropdown-menu animated zoomIn">
+                                                        <div class="notification-single-top">
+                                                            <h1>Notifications</h1>
+                                                        </div>
+                                                        <ul class="notification-menu">
+                                                            <li>
+                                                                <a href="#">
+                                                                    <div class="notification-icon">
+                                                                        <i class="educate-icon educate-checked edu-checked-pro admin-check-pro" aria-hidden="true"></i>
+                                                                    </div>
+                                                                    <div class="notification-content">
+                                                                        <span class="notification-date">1 Sept</span>
+                                                                        <h2>abir benaissa</h2>
+                                                                        <p>Please done this project as soon possible.</p>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="notification-view">
+                                                            <a href="#">View All Notification</a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
+															<img src="img/product/pro4.jpg" alt="" />
+															<span class="admin-name">Nom.Prénom</span>
+															<i class="fa fa-angle-down edu-icon edu-down-arrow"></i>
+														</a>
+                                                    <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
+                                                        <li><a href="#"><span class="edu-icon edu-home-admin author-log-ic"></span>My Account</a>
+                                                        </li>
+                                                        <li><a href="#"><span class="edu-icon edu-user-rounded author-log-ic"></span>My Profile</a>
+                                                        </li>
+                                                        <li><a href="#"><span class="edu-icon edu-settings author-log-ic"></span>Settings</a>
+                                                        </li>
+                                                        <li><a href="#"><span class="edu-icon edu-locked author-log-ic"></span>Log Out</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="nav-item nav-setting-open"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="educate-icon educate-menu"></i></a>
+
+                                                    <div role="menu" class="admintab-wrap menu-setting-wrap menu-setting-wrap-bg dropdown-menu animated zoomIn">
+                                                        <ul class="nav nav-tabs custon-set-tab">
+                                                            <li class="active"><a data-toggle="tab" href="#Notes">Notes</a>
+                                                            </li>
+                                                            <li><a data-toggle="tab" href="#Settings">Settings</a>
+                                                            </li>
+                                                        </ul>
+
+                                                        <div class="tab-content custom-bdr-nt">
+                                                            <div id="Notes" class="tab-pane fade in active">
+                                                                <div class="notes-area-wrap">
+                                                                    <div class="note-heading-indicate">
+                                                                        <h2><i class="fa fa-comments-o"></i> Latest Notes</h2>
+                                                                        <p>il ya  4 nouveaux messages.</p>
+                                                                    </div>
+                                                                    <div class="notes-list-area notes-menu-scrollbar">
+                                                                        <ul class="notes-menu-list">
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <div class="notes-list-flow">
+                                                                                        <div class="notes-img">
+                                                                                            <img src="img/contact/4.jpg" alt="" />
+                                                                                        </div>
+                                                                                        <div class="notes-content">
+                                                                                            <p>je suis un employé</p>
+                                                                                            <span>mardi 4:43 pm</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <div class="notes-list-flow">
+                                                                                        <div class="notes-img">
+                                                                                            <img src="img/contact/1.jpg" alt="" />
+                                                                                        </div>
+                                                                                        <div class="notes-content">
+                                                                                            <p>je suis un employé</p>
+                                                                                            <span>mardi 3:12 pm</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <div class="notes-list-flow">
+                                                                                        <div class="notes-img">
+                                                                                            <img src="img/contact/2.jpg" alt="" />
+                                                                                        </div>
+                                                                                        <div class="notes-content">
+                                                                                            <p>je suis un employé</p>
+                                                                                            <span>mardi 2:43 pm</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <div class="notes-list-flow">
+                                                                                        <div class="notes-img">
+                                                                                            <img src="img/contact/3.jpg" alt="" />
+                                                                                        </div>
+                                                                                        <div class="notes-content">
+                                                                                            <p>je suis un employé</p>
+                                                                                            <span>mardi 1:57 pm</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </a>
+                                                                          </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div id="Settings" class="tab-pane fade">
+                                                                <div class="setting-panel-area">
+                                                                    <div class="note-heading-indicate">
+                                                                        <h2><i class="fa fa-gears"></i> Settings Panel</h2>
+                                                                        <p> You have 20 Settings. 5 not completed.</p>
+                                                                    </div>
+                                                                    <ul class="setting-panel-list">
+                                                                        <li>
+                                                                            <div class="checkbox-setting-pro">
+                                                                                <div class="checkbox-title-pro">
+                                                                                    <h2>Show notifications</h2>
+                                                                                    <div class="ts-custom-check">
+                                                                                        <div class="onoffswitch">
+                                                                                            <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example">
+                                                                                            <label class="onoffswitch-label" for="example">
+																									<span class="onoffswitch-inner"></span>
+																									<span class="onoffswitch-switch"></span>
+																								</label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li>
+                                                                            <div class="checkbox-setting-pro">
+                                                                                <div class="checkbox-title-pro">
+                                                                                    <h2>Disable Chat</h2>
+                                                                                    <div class="ts-custom-check">
+                                                                                        <div class="onoffswitch">
+                                                                                            <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example3">
+                                                                                            <label class="onoffswitch-label" for="example3">
+																									<span class="onoffswitch-inner"></span>
+																									<span class="onoffswitch-switch"></span>
+																								</label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li>
+                                                                            <div class="checkbox-setting-pro">
+                                                                                <div class="checkbox-title-pro">
+                                                                                    <h2>Enable history</h2>
+                                                                                    <div class="ts-custom-check">
+                                                                                        <div class="onoffswitch">
+                                                                                            <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example4">
+                                                                                            <label class="onoffswitch-label" for="example4">
+																									<span class="onoffswitch-inner"></span>
+																									<span class="onoffswitch-switch"></span>
+																								</label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li>
+                                                                            <div class="checkbox-setting-pro">
+                                                                                <div class="checkbox-title-pro">
+                                                                                    <h2>Show charts</h2>
+                                                                                    <div class="ts-custom-check">
+                                                                                        <div class="onoffswitch">
+                                                                                            <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example7">
+                                                                                            <label class="onoffswitch-label" for="example7">
+																									<span class="onoffswitch-inner"></span>
+																									<span class="onoffswitch-switch"></span>
+																								</label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li>
+                                                                            <div class="checkbox-setting-pro">
+                                                                                <div class="checkbox-title-pro">
+                                                                                    <h2>Update everyday</h2>
+                                                                                    <div class="ts-custom-check">
+                                                                                        <div class="onoffswitch">
+                                                                                            <input type="checkbox" name="collapsemenu" checked="" class="onoffswitch-checkbox" id="example2">
+                                                                                            <label class="onoffswitch-label" for="example2">
+																									<span class="onoffswitch-inner"></span>
+																									<span class="onoffswitch-switch"></span>
+																								</label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li>
+                                                                            <div class="checkbox-setting-pro">
+                                                                                <div class="checkbox-title-pro">
+                                                                                    <h2>Global search</h2>
+                                                                                    <div class="ts-custom-check">
+                                                                                        <div class="onoffswitch">
+                                                                                            <input type="checkbox" name="collapsemenu" checked="" class="onoffswitch-checkbox" id="example6">
+                                                                                            <label class="onoffswitch-label" for="example6">
+																									<span class="onoffswitch-inner"></span>
+																									<span class="onoffswitch-switch"></span>
+																								</label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li>
+                                                                            <div class="checkbox-setting-pro">
+                                                                                <div class="checkbox-title-pro">
+                                                                                    <h2>Offline users</h2>
+                                                                                    <div class="ts-custom-check">
+                                                                                        <div class="onoffswitch">
+                                                                                            <input type="checkbox" name="collapsemenu" checked="" class="onoffswitch-checkbox" id="example5">
+                                                                                            <label class="onoffswitch-label" for="example5">
+																									<span class="onoffswitch-inner"></span>
+																									<span class="onoffswitch-switch"></span>
+																								</label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile Menu start -->
+                <div class="mobile-menu-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="mobile-menu">
+                                <nav id="dropdown">
+                                    <ul class="mobile-menu-nav">
+                                        <li><a data-toggle="collapse" data-target="#Charts" href="#">Home <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+                                            <ul class="collapse dropdown-header-top">
+                                                <li><a href="/indexadmin">Dashboard</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="/events">Evenement</a></li>
+                                       
+                                          <li><a data-toggle="collapse" data-target="#demopro" href="#">Utilisateurs <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+                                            <ul id="demopro" class="collapse dropdown-header-top">
+                                                <li><a href="/all-utilisateurs">All utilisateurs</a>
+                                                </li>
+                                                <li><a href="/add-utilisateur">Add utilisateur</a>
+                                                </li>
+                                                <li><a href="/delete-utilisateur">delete utilisateur</a>
+                                                </li>
+                                                <li><a href="/utilisateur-profile">utilisateur Profile</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                                                <li><a data-toggle="collapse" data-target="#democrou" href="#">Chapiters <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+                                            <ul id="democrou" class="collapse dropdown-header-top">
+                                                <li><a href="/all-chapiters">All Chapiters</a>
+                                                </li>
+                                                <li><a href="/add-chapiter">Add chapiter</a>
+                                                </li>
+                                                <li><a href="/delete-chapiter">delete chapiter</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a data-toggle="collapse" data-target="#demolibra" href="#">sous-chapiters <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+                                            <ul id="demolibra" class="collapse dropdown-header-top">
+                                                <li><a href="/sous-chapiters">Library Assets</a>
+                                                </li>
+                                                <li><a href="/add-sous-chapiter">Add sous-chapiter</a>
+                                                </li>
+                                                <li><a href="/delete-sous-chapiter">delete sous-chapiter</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                         <li><a data-toggle="collapse" data-target="#demodepart" href="#">Articles <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+                                            <ul id="demodepart" class="collapse dropdown-header-top">
+                                                <li><a href="/Articles">liste des articles</a>
+                                                </li>
+                                                <li><a href="/add-article">Add article</a>
+                                                </li>
+                                                <li><a href="/delete-article">delete article</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a data-toggle="collapse" data-target="#demomi" href="#">Mailbox <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+                                            <ul id="demomi" class="collapse dropdown-header-top">
+                                                <li><a href="/mailbox">Inbox</a>
+                                                </li>
+                                                <li><a href="/mailbox-view">demendes</a>
+                                                </li>
+                                                <li><a href="/mailbox-compose">Compose un email</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a data-toggle="collapse" data-target="#Chartsmob" href="#">les bilans <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+                                            <ul id="Chartsmob" class="collapse dropdown-header-top">
+                                                <li><a href="/billan">billan </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a data-toggle="collapse" data-target="#Appviewsmob" href="#">Notifications <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+                                            <ul id="Appviewsmob" class="collapse dropdown-header-top">
+                                                <li><a href="/notifications">Notifications</a>
+                                                </li>
+                                                <li><a href="/messages">Messages</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a data-toggle="collapse" data-target="#Pagemob" href="#">Pages <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+                                            <ul id="Pagemob" class="collapse dropdown-header-top">
+                                               
+                                                </li>
+                                                <li><a href="/password-recovery">Password Recovery</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile Menu end -->
+            <div class="breadcome-area" style="padding: 30px;">  
+                <div class="container-fluid">
+                    <div class="row">
+                        <h1 style="	font-size: 2.5rem; line-height: 1.2; letter-spacing: -.1rem;	margin-top: 0;margin-bottom: 2rem; font-weight: 300;">les chapiters</h1>
+                        <div class="block" style="	width:300px; height: 2px; background: #0063AB; /* Old browsers */ background: -moz-linear-gradient(-45deg, #0063AB 0%, #5fc3e4 100%); background: -webkit-linear-gradient(-45deg, #0063AB 0%, #5fc3e4 100%); background: linear-gradient(135deg, #0063AB 0%, #5fc3e4 100%); margin-bottom: 50px;"></div>
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                            <div class="courses-inner res-mg-b-30">
+                                <div class="courses-title">
+                                    <a href="#"><img src="https://images.unsplash.com/photo-1518904868869-fbb2cdd0429a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2F0YXN0cm9waGV8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt=""></a>
+                                    <h2>solidarité</h2>
+                                </div>
+                                <div class="course-des">
+                                    <p><span><i class="fa fa-clock"></i></span> <b>N° sous chapiter:</b> 2</p>
+                                    <p><span><i class="fa fa-clock"></i></span> <b>montant :</b> 50000 </p>
+                                    <p><span><i class="fa fa-clock"></i></span> <b>description:</b>المادة 22 تقدم اللجنة مساعدة مالية للمتضررين من موظفي و اساتذة المدرسة اتر حادث طارئ او كارثة طبيعية .</p></p>
+                                </div>
+                                <div class="product-buttons">
+                                    <button type="button" class="button-default cart-btn">lire plus</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                            <div class="courses-inner">
+                                <div class="courses-title">
+                                    <a href="#"> <img src="https://images.unsplash.com/photo-1626427403451-06f32bd44027?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y3Jpc2UlMjBzYW5pdGFpcmV8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt=""></a>
+                                    <h2>aides sociales</h2>
+                                </div>
+                                <div class="course-des">
+                                    <p><span><i class="fa fa-clock"></i></span> <b>N° sous chapiter:</b> 2</p>
+                                    <p><span><i class="fa fa-clock"></i></span> <b>montant:</b> 80000 </p>
+                                    <p><span><i class="fa fa-clock"></i></span> <b>description:</b>المادة 26 تقدم اللجنة مساعدة مالية لموظفي و اساتذة  المدرسة الذين هم في حاجة للمساعدة تخضع لتقدير اللجنة </p>
+                                </div>
+                                <div class="product-buttons">
+                                    <button type="button" class="button-default cart-btn">lire plus</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                            <div class="courses-inner res-mg-t-30 dk-res-t-pro-30">
+                                <div class="courses-title">
+                                    <a href="#"><img src="https://th.bing.com/th/id/OIP.XL5YwVOPJKGJWgG-7DUJ1wHaE8?pid=ImgDet&rs=1" alt=""></a>
+                                    <h2>prét sociales</h2>
+                                </div>
+                                <div class="course-des">
+                                    <p><span><i class="fa fa-clock"></i></span> <b>N° sous chapiter:</b> 2</p>
+                                    <p><span><i class="fa fa-clock"></i></span> <b>montant:</b> 60000 </p>
+                                    <p><span><i class="fa fa-clock"></i></span> <b>description:</b>المادة 34 تقدم اللجنة مساعدة مالية لموظفي و اساتذة  المدرسة الذين هم في حاجة للمساعدة تخضع لتقدير اللجنة </p>
+                                </div>
+                                <div class="product-buttons">
+                                    <button type="button" class="button-default cart-btn">lire plus</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                            <div class="courses-inner res-mg-t-30 dk-res-t-pro-30">
+                                <div class="courses-title">
+                                    <a href="#"><img src="https://www.laboratoire-masmoudi.com/wp-content/uploads/2020/12/laboratoire-danalyse-medicale-tunisie.jpg" alt=""></a>
+                                    <h2>service de santé</h2>
+                                </div>
+                                <div class="course-des">
+                                    <p><span><i class="fa fa-clock"></i></span> <b>N° sous chapiter:</b> 2</p>
+                                    <p><span><i class="fa fa-clock"></i></span> <b>montant:</b> 60000 </p>
+                                    <p><span><i class="fa fa-clock"></i></span> <b>description:</b>المادة  17 تسقف العمليات القيصرية في حدود مبلغ خمسين الف دينار (50000 دج) كحد اقصى    . </p>
+                                </div>
+                                <div class="product-buttons">
+                                    <button type="button" class="button-default cart-btn">lire plus</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mg-b-15">
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                            <div class="courses-inner mg-t-30">
+                                <div class="courses-title">
+                                    <a href="#"><img src="https://www.carmaux.fr/uploads/Actualite/45/IMF_50/GAB_CARMAUX/2888_022_couv.png" alt=""></a>
+                                    <h2>activité culturels</h2>
+                                </div>
+
+                                <div class="course-des">
+                                    <p><span><i class="fa fa-clock"></i></span> <b>N° sous chapiter:</b> 2</p>
+                                    <p><span><i class="fa fa-clock"></i></span> <b>montant:</b> 60000 </p>
+                                    <p><span><i class="fa fa-clock"></i></span> <b>description:</b>          découvert les jolies colonies de vacances et les joies du voyage, ont appris à nager, à skier…  </p>
+                                </div>
+                                <div class="product-buttons">
+                                    <button type="button" class="button-default cart-btn">lire plus</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer-copyright-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="footer-copy-right">
+                            <p> ABOUT US<br>Une application web pour <br>la gestion des ouevres sociales<br> la comité sociales ESI-SBA</p>
+                            <i class="fa fa-facebook-official w3-hover-opacity"></i>
+                            <i class="fa fa-instagram w3-hover-opacity"></i>
+                            <i class="fa fa-snapchat w3-hover-opacity"></i>
+                            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+                            <i class="fa fa-twitter w3-hover-opacity"></i>
+                            <i class="fa fa-linkedin w3-hover-opacity"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- jquery
+		============================================ -->
+    <script src="/js/vendor/jquery-1.12.4.min.js"></script>
+    <!-- bootstrap JS
+		============================================ -->
+    <script src="/js/bootstrap.min.js"></script>
+    <!-- wow JS
+		============================================ -->
+    <script src="/js/wow.min.js"></script>
+    <!-- price-slider JS
+		============================================ -->
+    <script src="/js/jquery-price-slider.js"></script>
+    <!-- meanmenu JS
+		============================================ -->
+    <script src="/js/jquery.meanmenu.js"></script>
+    <!-- owl.carousel JS
+		============================================ -->
+    <script src="/js/owl.carousel.min.js"></script>
+    <!-- sticky JS
+		============================================ -->
+    <script src="/js/jquery.sticky.js"></script>
+    <!-- scrollUp JS
+		============================================ -->
+    <script src="/js/jquery.scrollUp.min.js"></script>
+    <!-- mCustomScrollbar JS
+		============================================ -->
+    <script src="/js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/js/scrollbar/mCustomScrollbar-active.js"></script>
+    <!-- metisMenu JS
+		============================================ -->
+    <script src="/js/metisMenu/metisMenu.min.js"></script>
+    <script src="/js/metisMenu/metisMenu-active.js"></script>
+    <!-- morrisjs JS
+		============================================ -->
+    <script src="/js/sparkline/jquery.sparkline.min.js"></script>
+    <script src="/js/sparkline/jquery.charts-sparkline.js"></script>
+    <!-- calendar JS
+		============================================ -->
+    <script src="/js/calendar/moment.min.js"></script>
+    <script src="/js/calendar/fullcalendar.min.js"></script>
+    <script src="/js/calendar/fullcalendar-active.js"></script>
+    <!-- form validate JS
+		============================================ -->
+    <script src="/js/form-validation/jquery.form.min.js"></script>
+    <script src="/js/form-validation/jquery.validate.min.js"></script>
+    <script src="/js/form-validation/form-active.js"></script>
+    <!-- tab JS
+		============================================ -->
+    <script src="/js/tab.js"></script>
+    <!-- plugins JS
+		============================================ -->
+    <script src="/js/plugins.js"></script>
+    <!-- main JS
+		============================================ -->
+    <script src="/js/mainind.js"></script>
+    <!-- tawk chat JS
+		============================================ -->
+    <script src="/js/tawk-chat.js"></script>
+    
+</body>
+
+</html>

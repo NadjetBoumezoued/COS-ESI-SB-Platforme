@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@800&family=Raleway&display=swap');
+
+body {
+  font-family: ''Vibur', cursive';
+  /*   the main font */
+      font-family: 'Abel', sans-serif;
+  opacity: .95;
+
+background-size:cover;
+background-repeat: no-repeat;
+ }
+
+
+#title {
+  font-family: 'Exo', sans-serif;
+  text-align: center;
+  background: #00c6ff;
+  background: linear-gradient(225deg, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#description {
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  margin-top: -10px;
+  color: black;
+}
+
+.seperator {
+  width: 20vw;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.form-container {
+  max-width: 60vw;
+  margin: 0 auto;
+  background: white;
+  background: linear-gradient(300deg,white, #d0d3d6);
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.bold-txt {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+  color: #0066ab;
+  display: inline-block;
+}
+
+.txt {
+  font-family: 'Raleway', sans-serif;
+  color: #fff;
+}
+
+#survey-form {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-organizer {
+  margin-top: 3px;
+  margin-bottom: 20px;
+  line-height: 20px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.sel-organizer {
+  margin: -12px 0 33px 0;
+  padding: 5px 0 5px 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+.fieldset-organizer {
+  font-family: 'Raleway', sans-serif;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  line-height: 25px;
+  margin-bottom: 30px;
+}
+
+#additional-cmnts {
+  font-family: 'Raleway', sans-serif;
+  min-height: 100px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+#submit {
+  font-family: 'Raleway', sans-serif;
+  background-color: #0066ab;
+  border-radius: 5px;
+  border-color: transparent;
+  line-height: 25px;
+  font-size: 16px;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 10px;
+}
+#annuler {
+  font-family: 'Raleway', sans-serif;
+  background-color: #0066ab;
+  border-radius: 5px;
+  border-color: transparent;
+  line-height: 25px;
+  font-size: 16px;
+  font-weight: 900;
+  color: #fff;
+}
+#modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.main-row{
+  height: 100vh;
+}
+.main-col{
+  max-width: 500px;
+  min-height: 300px;
+}
+.todo-done{
+  text-decoration: line-through;
+}

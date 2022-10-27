@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> </title>
+   <link rel="stylesheet" href="/style_billan.css">
+    <link rel="stylesheet" href="/style_par_mois.css">
+</head>
+<body>
+   <form method="post" action="/auth/pdf"> 
+    <button type="submit" class="btn btn-primary">pdf</button> 
+    </form>
+    <form method="post" action="/auth/billan_mois"> 
+     <input type="date" class="date" id="date" name="date" placeholder="date par date">
+    <button type="submit" class="btn btn-primary">billan par date </button> 
+     </form>
+    
+
+      <div class="table-data">
+      <h2> </h2>
+    <table  class="container">
+      <thead>
+        <tr>
+            <th>id-operation</th>
+            <th>id-expéditeur</th>
+            <th>Nom-expéditeur</th>
+            <th>prenom-expéditeur</th>
+            <th>destinataire</th>
+            <th>montant</th>
+            <th>Discription</th>
+            <th>Date</th>
+             </tr>
+         </thead>
+         	<tbody>
+        {{#each total1 }}
+
+        <tr>
+            <td>{{ id_operation}}</td>
+             <td>{{id_employe }}</td>
+            <td>{{nom}}</td>
+            <td>{{prenom }}</td>
+             <td>cos</td>
+            <td>{{ montant}}</td>
+            <td>{{ discription }}</td>
+            <td>{{ date }}</td>
+           
+           
+         {{/each}}
+        
+           
+        
+        </tr>
+      
+            </tbody>
+    
+    </table>
+    </div>
+    
+     
+</body>
+</html>

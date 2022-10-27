@@ -1,0 +1,95 @@
+const express=require('express');
+const router=express.Router();
+
+router.get('/indexadmin',(req,res)=>
+{
+    res.render('indexadmin');
+});
+router.get('/register',(req,res)=>
+{
+    res.render('register');
+});
+router.get('/login',(req,res)=>
+{
+    res.render('login');
+});
+router.get('/trans',(req,res)=>
+{
+    res.render('trans');
+});
+router.get('/email',(req,res)=>
+{
+    res.render('email');
+});
+router.get('/billan',(req,res)=>
+{
+    res.render('billan');
+});
+router.get('/billan_mois',(req,res)=>
+{
+    res.render('billan_mois');
+});
+router.get('/registerinarti',(req,res)=>
+{
+    res.render('registerinarti');
+});
+router.get('/partagermontant',(req,res)=>
+{
+    res.render('partagermontant');
+});
+
+router.get('/',(req,res)=>
+{
+    res.render('register1');
+});
+router.get('/appelOffre',(req,res)=>
+{
+    res.render('appelOffre');
+});
+router.get('/all-chapiters',(req,res)=>
+{
+    res.render('all-chapiters');
+});
+router.get('/add-article',(req,res)=>
+{
+    res.render('add-article');
+});
+
+router.get('/add-chapiter',(req,res)=>
+{
+    res.render('add-chapiter');
+});
+router.get('/add-sous-chapiter',(req,res)=>
+{
+    res.render('add-sous-chapiter');
+});
+router.get('/add-utilisateur',(req,res)=>
+{
+    res.render('add-utilisateur');
+});
+router.get('/all-chapiters',(req,res)=>
+{
+    res.render('all-chapiters');
+});
+router.get('/all-utilisateurs',(req,res)=>
+{
+    res.render('all-utilisateurs');
+});
+router.get('/delete-chapiter',(req,res)=>
+{
+    res.render('delete-chapiter');
+});
+router.get('/delete-sous-chapiter',(req,res)=>
+{
+    res.render('delete-sous-chapiter');
+});
+router.get('/delete-utilisateur',(req,res)=>
+{
+    res.render('delete-utilisateur');
+});
+router.get('/sous-chapiter',(req,res)=>
+{
+    res.render('sous-chapiter');
+});
+
+module.exports = router;
